@@ -46,9 +46,19 @@ It allows users to create tasks and manage them through a simple UI.
 
 ---
 
+## 🧪 Testing
+
+This project includes:
+- Unit Tests (Jest)
+- Integration Tests (Supertest)
+
+Run tests:
+
+```bash
+npm test
+
 ## 🖥️ UI Layout
 - Left side → Task creation form
 - Right side → Task list (latest 5 tasks)
 
 ---
-
