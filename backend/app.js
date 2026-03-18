@@ -6,6 +6,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+module.exports = app; 
+
 // Create Task
 app.post("/tasks", (req, res) => {
   const { title, description } = req.body;
@@ -45,6 +47,12 @@ app.put("/tasks/:id", (req, res) => {
   );
 });
 
-app.listen(5000, () => {
-  console.log("Server running on port 5000");
-});
+// app.listen(5000, () => {
+//   console.log("Server running on port 5000");
+// });
+
+if (process.env.NODE_ENV !== "test") {
+  app.listen(5000, () => {
+    console.log("Server running on port 5000");
+  });
+}
